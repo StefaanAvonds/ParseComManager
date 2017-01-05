@@ -73,18 +73,87 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="DataModels\Calendar.cs" />
     <Compile Include="DataModels\ConfigurationElement.cs" />
+    <Compile Include="DataModels\Contact.cs" />
+    <Compile Include="DataModels\Groups.cs" />
+    <Compile Include="DataModels\Holiday.cs" />
+    <Compile Include="DataModels\Horse.cs" />
+    <Compile Include="DataModels\HorseContact.cs" />
+    <Compile Include="DataModels\Schedule.cs" />
+    <Compile Include="DataModels\Settings.cs" />
+    <Compile Include="DataModels\Tasks.cs" />
     <Compile Include="Forms\FormView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormView.Designer.cs">
       <DependentUpon>FormView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FVCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FVCalendar.Designer.cs">
+      <DependentUpon>FVCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FVContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FVContact.Designer.cs">
+      <DependentUpon>FVContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FVGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FVGroups.Designer.cs">
+      <DependentUpon>FVGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FVHoliday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FVHoliday.Designer.cs">
+      <DependentUpon>FVHoliday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FVHorse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FVHorse.Designer.cs">
+      <DependentUpon>FVHorse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FVHorseContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FVHorseContact.Designer.cs">
+      <DependentUpon>FVHorseContact.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FVLogins.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FVLogins.Designer.cs">
       <DependentUpon>FVLogins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FVSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FVSchedule.Designer.cs">
+      <DependentUpon>FVSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FVSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FVSettings.Designer.cs">
+      <DependentUpon>FVSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FVTables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FVTables.Designer.cs">
+      <DependentUpon>FVTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FVTasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FVTasks.Designer.cs">
+      <DependentUpon>FVTasks.cs</DependentUpon>
     </Compile>
     <Compile Include="Homepage.cs">
       <SubType>Form</SubType>
@@ -98,7 +167,16 @@
     <Compile Include="Parse\ParseManager.cs" />
     <Compile Include="Parse\ParseTableNames.cs" />
     <Compile Include="Parse\Tables\BaseParseTable.cs" />
+    <Compile Include="Parse\Tables\CalendarParseTable.cs" />
+    <Compile Include="Parse\Tables\ContactParseTable.cs" />
+    <Compile Include="Parse\Tables\GroupsParseTable.cs" />
+    <Compile Include="Parse\Tables\HolidayParseTable.cs" />
+    <Compile Include="Parse\Tables\HorseContactParseTable.cs" />
+    <Compile Include="Parse\Tables\HorseParseTable.cs" />
     <Compile Include="Parse\Tables\LoginParseTable.cs" />
+    <Compile Include="Parse\Tables\ScheduleParseTable.cs" />
+    <Compile Include="Parse\Tables\SettingsParseTable.cs" />
+    <Compile Include="Parse\Tables\TasksParseTable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\FormView.resx">
@@ -106,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FVLogins.resx">
       <DependentUpon>FVLogins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FVTables.resx">
+      <DependentUpon>FVTables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>

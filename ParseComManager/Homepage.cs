@@ -58,12 +58,12 @@ namespace ParseComManager
             Application.Exit();
         }
 
-        private void btnLogins_Click(object sender, EventArgs e)
+        private void btnTables_Click(object sender, EventArgs e)
         {
-            var page = new FVLogins();
-            page.Show();
+            var page = new FVTables();
+            page.ShowDialog();
         }
-
+        
         private void btnExit_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to exit?", "Exit application", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

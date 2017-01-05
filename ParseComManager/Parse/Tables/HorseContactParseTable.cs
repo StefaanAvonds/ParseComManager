@@ -1,35 +1,37 @@
 ﻿using Parse;
 using ParseComManager.DataModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace ParseComManager.Parse.Tables
 {
-    public class LoginParseTable : BaseParseTable<Login>
+    public class HorseContactParseTable : BaseParseTable<HorseContact>
     {
-        public LoginParseTable()
-            : base(ParseTableNames.Login)
+        public HorseContactParseTable()
+            : base(ParseTableNames.HorseContact)
         {
 
         }
 
         /// <summary>
-        /// Select all Login-records from Parse.com.
+        /// Select all HorseContact-records from Parse.com.
         /// </summary>
         /// <returns></returns>
-        public async Task<List<Login>> SelectAll()
+        public async Task<List<HorseContact>> SelectAll()
         {
             var query = from table in ParseObject.GetQuery(TableName.ToString())
-                        orderby table.Get<int>(nameof(Login.Id))
+                        orderby table.Get<int>(nameof(HorseContact.Id))
                         select table;
 
             var records = await query.FindAsync();
 
-            var result = new List<Login>();
+            var result = new List<HorseContact>();
             foreach (var record in records)
             {
-                result.Add(new Login(record));
+                result.Add(new HorseContact(record));
             }
             return result;
         }

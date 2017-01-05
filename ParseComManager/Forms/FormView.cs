@@ -9,6 +9,8 @@ namespace ParseComManager.Forms
     public partial class FormView<TDataModel> : Form
         where TDataModel : IDataModel
     {
+        private string _title;
+
         public FormView()
         {
             InitializeComponent();
@@ -17,12 +19,16 @@ namespace ParseComManager.Forms
 
         private void FormView_Load(object sender, EventArgs e)
         {
+            _title = Text;
             ReloadData();
         }
 
         protected async void ReloadData()
         {
-            grid.DataSource = await DoRefreshDataSource();
+            var list = await DoRefreshDataSource();
+            grid.DataSource = list;
+
+            Text = $"{_title}: {list.Count}";
         }
 
         protected virtual Task<List<TDataModel>> DoRefreshDataSource()

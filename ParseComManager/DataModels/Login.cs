@@ -27,13 +27,33 @@ namespace ParseComManager.DataModels
         public Login(ParseObject parseObject)
             : this()
         {
-            Id = parseObject.Get<int>(nameof(Id));
-            Username = parseObject.Get<string>(nameof(Username));
-            Password = parseObject.Get<string>(nameof(Password));
-            FullName = parseObject.Get<string>(nameof(FullName));
-            Deleted = parseObject.Get<bool>(nameof(Deleted));
-            Admin = parseObject.Get<bool>(nameof(Admin));
-            LastModified = parseObject.Get<DateTime?>(nameof(LastModified));
+            int id;
+            parseObject.TryGetValue(nameof(Id), out id);
+            Id = id;
+
+            string username;
+            parseObject.TryGetValue(nameof(Username), out username);
+            Username = username;
+
+            string password;
+            parseObject.TryGetValue(nameof(Password), out password);
+            Password = password;
+
+            string fullName;
+            parseObject.TryGetValue(nameof(FullName), out fullName);
+            FullName = fullName;
+
+            bool deleted;
+            parseObject.TryGetValue(nameof(Deleted), out deleted);
+            Deleted = deleted;
+
+            bool admin;
+            parseObject.TryGetValue(nameof(Admin), out admin);
+            Admin = admin;
+
+            DateTime? lastModified;
+            parseObject.TryGetValue(nameof(LastModified), out lastModified);
+            LastModified = lastModified;
         }
     }
 }

@@ -1,35 +1,37 @@
 ﻿using Parse;
 using ParseComManager.DataModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace ParseComManager.Parse.Tables
 {
-    public class LoginParseTable : BaseParseTable<Login>
+    public class ScheduleParseTable : BaseParseTable<Schedule>
     {
-        public LoginParseTable()
-            : base(ParseTableNames.Login)
+        public ScheduleParseTable()
+            : base(ParseTableNames.Schedule)
         {
 
         }
 
         /// <summary>
-        /// Select all Login-records from Parse.com.
+        /// Select all Schedule-records from Parse.com.
         /// </summary>
         /// <returns></returns>
-        public async Task<List<Login>> SelectAll()
+        public async Task<List<Schedule>> SelectAll()
         {
             var query = from table in ParseObject.GetQuery(TableName.ToString())
-                        orderby table.Get<int>(nameof(Login.Id))
+                        orderby table.Get<int>(nameof(Schedule.Id))
                         select table;
 
             var records = await query.FindAsync();
 
-            var result = new List<Login>();
+            var result = new List<Schedule>();
             foreach (var record in records)
             {
-                result.Add(new Login(record));
+                result.Add(new Schedule(record));
             }
             return result;
         }

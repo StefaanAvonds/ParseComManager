@@ -29,23 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage));
-            this.btnLogins = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.groupLineSeparator = new System.Windows.Forms.GroupBox();
             this.btnConfigurationFile = new System.Windows.Forms.Button();
+            this.btnTables = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnLogins
-            // 
-            this.btnLogins.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogins.Location = new System.Drawing.Point(12, 12);
-            this.btnLogins.Name = "btnLogins";
-            this.btnLogins.Size = new System.Drawing.Size(226, 32);
-            this.btnLogins.TabIndex = 0;
-            this.btnLogins.Text = "Logins";
-            this.btnLogins.UseVisualStyleBackColor = true;
-            this.btnLogins.Click += new System.EventHandler(this.btnLogins_Click);
             // 
             // btnExit
             // 
@@ -79,16 +67,28 @@
             this.btnConfigurationFile.UseVisualStyleBackColor = true;
             this.btnConfigurationFile.Click += new System.EventHandler(this.btnConfigurationFile_Click);
             // 
+            // btnTables
+            // 
+            this.btnTables.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTables.Location = new System.Drawing.Point(12, 12);
+            this.btnTables.Name = "btnTables";
+            this.btnTables.Size = new System.Drawing.Size(226, 32);
+            this.btnTables.TabIndex = 0;
+            this.btnTables.Text = "Tables";
+            this.btnTables.UseVisualStyleBackColor = true;
+            this.btnTables.Click += new System.EventHandler(this.btnTables_Click);
+            // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(250, 253);
             this.ControlBox = false;
+            this.Controls.Add(this.btnTables);
             this.Controls.Add(this.btnConfigurationFile);
             this.Controls.Add(this.groupLineSeparator);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnLogins);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(268, 300);
             this.MinimumSize = new System.Drawing.Size(268, 300);
@@ -100,11 +100,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnLogins;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.GroupBox groupLineSeparator;
         private System.Windows.Forms.Button btnConfigurationFile;
+        private System.Windows.Forms.Button btnTables;
     }
 }
 
